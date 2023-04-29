@@ -1,0 +1,12 @@
+<ul>
+
+<% @movies.each do |movies| %>
+<li>
+	<strong><%=movies.title%></strong> (<%=movies.rating%>): 
+	<%= total_gross(movies) %>
+	<p> <%=truncate(movies.description, length:20, seperator: ' ')%></p>
+	<p> <%=year_of(movies)%></p>
+<%end%>
+</li>
+</ul>
+
